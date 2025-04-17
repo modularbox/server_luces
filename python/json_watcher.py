@@ -3,6 +3,10 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from custom_logger import CustomLogger
+from PyDMXControl.controllers import OpenDMXController
+from PyDMXControl.profiles.Generic import Custom
+from fixture_model import FixtureModel
+from custom_logger import CustomLogger
 # Crear una instancia del logger
 logger = CustomLogger()
 # Cargar luces desde JSON
