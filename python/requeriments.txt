@@ -1,0 +1,3 @@
+PyDMXControl==2.0.0
+python-socketio==5.11.1
+websocket-client==1.7.0

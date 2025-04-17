@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    // "target": "es2021",
+    "lib": ["es2021", "dom"],
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./app",
+    // otras opciones
+    "typeRoots": ["./node_modules/@types", "./app/types"],
+    "sourceMap": true,   // Habilitar sourceMap
+    "strict": true,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true
+  },
+  "include": [
+    "app/**/*", "files", "app/config_json"],
+  "exclude": [
+    "node_modules"
+  ],
+}

@@ -1,0 +1,43 @@
+{
+  "saucedilla": { "horarios": [], "modo": "manual", "canales": [1, 2, 3] },
+  "campanario": {
+    "horarios": [
+      { "horario_inicio": "19:30:00", "horario_fin": "23:59:00" },
+      { "horario_inicio": "00:00:00", "horario_fin": "05:00:00" }
+    ],
+    "modo": "automatico",
+    "canales": [3, 11, 19, 27, 32, 37, 42, 47, 52, 60, 68, 76, 84, 92, 100]
+  },
+  "cruz_bendita": {
+    "horarios": [
+      { "horario_inicio": "19:30:00", "horario_fin": "23:59:00" },
+      { "horario_inicio": "00:00:00", "horario_fin": "05:00:00" }
+    ],
+    "modo": "automatico",
+    "canales": [1, 4, 9, 12, 17, 20, 25, 28, 33, 36, 43, 47, 51, 55]
+  },
+  "desaguadero": {
+    "horarios": [
+      { "horario_inicio": "10:00:00", "horario_fin": "23:59:00" },
+      { "horario_inicio": "00:00:00", "horario_fin": "05:00:00" }
+    ],
+    "modo": "automatico",
+    "canales": [1, 2, 3, 4, 7, 12, 17, 22]
+  },
+  "ermita": {
+    "horarios": [
+      { "horario_inicio": "19:30:00", "horario_fin": "23:59:00" },
+      { "horario_inicio": "00:00:00", "horario_fin": "05:00:00" }
+    ],
+    "modo": "automatico",
+    "canales": [13, 23, 33, 43]
+  },
+  "garage": {
+    "horarios": [
+      { "horario_inicio": "19:30:00", "horario_fin": "23:59:00" },
+      { "horario_inicio": "00:00:00", "horario_fin": "05:00:00" }
+    ],
+    "modo": "automatico",
+    "canales": []
+  }
+}
