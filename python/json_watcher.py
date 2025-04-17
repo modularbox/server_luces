@@ -3,13 +3,43 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from custom_logger import CustomLogger
-from your_dmx_control_module import ciclo_luces, off_all_channels  # importa tus funciones
+# Crear una instancia del logger
+logger = CustomLogger()
+# Cargar luces desde JSON
+# ------------------ Todo el codigo de las luces ------------------
+try:
+    dmx = OpenDMXController()
+    # Big square fixture model
+    bsq_fixture_model = FixtureModel("DRGBWSEP")
+    custom_fixture = dmx.add_fixture(Custom,name="CustomFixture", start_channel=1, channels=500)
+    bsq_fixture_model.setup_fixture(custom_fixture)
+except Exception as e:
+    print('error', e)
 
 # Ruta del archivo JSON con los canales
 JSON_PATH = "config/canales_dmx.json"
 logger = CustomLogger()
 estado_actual = []  # Guardamos el estado actual para detectar cambios
 
+# Funciones para el control de los canales
+def encender_luz(channel):
+    # print("Se encendieron las luces")
+    custom_fixture.dim(255, 0, channel - 1)
+def encender_con_value_luz(value, channel):
+    # print("Se encendieron las luces")
+    custom_fixture.dim(value, 0, channel - 1)
+def off_all_channels():
+    logger.log_info("Apagar todos los canales")
+    for i in range(500):
+        custom_fixture.dim(0, 0, i)
+def ciclo_luces():
+    global guardar_configuracion_programa_canales
+    luces = guardar_configuracion_programa_canales
+    for channel in luces:
+        if isinstance(channel, list):
+            encender_con_value_luz(channel[1], channel[0])
+        else:
+            encender_luz(channel)
 
 def cargar_configuracion():
     try:
