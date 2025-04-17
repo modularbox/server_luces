@@ -41,6 +41,8 @@ def off_all_channels():
     for i in range(500):
         custom_fixture.dim(0, 0, i)
 def ciclo_luces(channels):
+    print("Ciclo de luces")
+    print(channels)
     for channel in channels:
         if isinstance(channel, list):
             encender_con_value_luz(channel[1], channel[0])
