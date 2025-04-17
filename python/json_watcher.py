@@ -40,10 +40,8 @@ def off_all_channels():
     logger.log_info("Apagar todos los canales")
     for i in range(500):
         custom_fixture.dim(0, 0, i)
-def ciclo_luces():
-    global guardar_configuracion_programa_canales
-    luces = guardar_configuracion_programa_canales
-    for channel in luces:
+def ciclo_luces(channels):
+    for channel in channels:
         if isinstance(channel, list):
             encender_con_value_luz(channel[1], channel[0])
         else:
