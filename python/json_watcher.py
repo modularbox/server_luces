@@ -25,6 +25,10 @@ JSON_PATH = "config/canales_dmx.json"
 logger = CustomLogger()
 estado_actual = []  # Guardamos el estado actual para detectar cambios
 
+# Guardar configuraciones anteriores
+guardar_configuracion_programa_por_tiempo_canales = []
+guardar_configuracion_programa_canales = []
+luces_encendidas = False
 # Funciones para el control de los canales
 def encender_luz(channel):
     # print("Se encendieron las luces")
